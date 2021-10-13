@@ -1,9 +1,5 @@
 from tkinter import *
 import random
-math_sol=""
-
-root=Tk()
-root.title("Calculator")
 
 def but_1_():
     global math_sol
@@ -94,6 +90,11 @@ def left_paren():
     global math_sol
     math_sol+=")"
     Math.config(text=math_sol)
+
+math_sol=""
+
+root=Tk()
+root.title("Calculator")
     
 Math=Label(root,text="",width=20,bg="light blue")
 Math.grid(row=0,column=1)
@@ -152,6 +153,4 @@ left_Paren.grid(row=6,column=0)
 right_Paren=Button(root,text="(",command=right_paren)
 right_Paren.grid(row=6,column=2)
 
-
-
-
+root.mainloop()
